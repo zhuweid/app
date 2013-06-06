@@ -13,7 +13,10 @@ def configure_remote
 end
 
 def create_first_branches
-  %w[clean master starting_point].each{|branch| checkout(branch)}
+  %w[clean starting_point].each do |branch| 
+    checkout 'master'
+    checkout(branch)
+  end
 end
 
 install_utilities
