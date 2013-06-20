@@ -1,7 +1,7 @@
 configs ={
   :git => {
     :user => 'sydneyjune2013',
-    :remotes => %w/rprasadk zhuweid ssoegyono HenriRath cmaslen/,
+    :remotes => %w/rprasadk zhuweid ssoegyono HenriRaath cmaslen/,
     :repo => 'app' 
   }
 }
