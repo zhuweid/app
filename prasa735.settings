@@ -1,0 +1,7 @@
+config = 
+{
+  :has_iis_express => false,
+  :iis_express => 'C:\iisexpress\iisexpress.exe',
+  :browser => 'c:\pathtoie\iexplore.exe'
+}
+configatron.configure_from_hash config
