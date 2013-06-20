@@ -1,0 +1,7 @@
+config = 
+{
+  :has_iis_express => true,
+  :iis_express => 'i:\iisexpress.exe',
+  :browser => 'C:\Users\HENRI381\AppData\Local\Google\Chrome\Application\chrome.exe'
+}
+configatron.configure_from_hash config
