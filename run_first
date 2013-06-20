@@ -19,6 +19,6 @@ def create_first_branches
   end
 end
 
-install_utilities
+# install_utilities
 configure_remote
 create_first_branches
