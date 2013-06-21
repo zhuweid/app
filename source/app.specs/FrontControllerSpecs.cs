@@ -1,20 +1,18 @@
-﻿ using Machine.Specifications;
- using app.web.core;
- using developwithpassion.specifications.rhinomocks;
- using developwithpassion.specifications.extensions;
+﻿using Machine.Specifications;
+using app.web.core;
+using developwithpassion.specifications.extensions;
+using developwithpassion.specifications.rhinomocks;
 
 namespace app.specs
-{  
-  [Subject(typeof(FrontController))]  
+{
+  [Subject(typeof(FrontController))]
   public class FrontControllerSpecs
   {
     public abstract class concern : Observes<IProcessRequests,
                                       FrontController>
     {
-        
     }
 
-   
     public class when_processing_a_request : concern
     {
       Establish c = () =>
