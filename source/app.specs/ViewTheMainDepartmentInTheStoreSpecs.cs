@@ -1,4 +1,5 @@
-﻿ using Machine.Specifications;
+﻿ using System.Collections.Generic;
+ using Machine.Specifications;
  using app.web.application.catalogbrowsing;
  using app.web.core;
  using developwithpassion.specifications.rhinomocks;
@@ -21,17 +22,23 @@ namespace app.specs
       Establish c = () =>
       {
         department_repository = depends.on<IFindDepartments>();
+        display_engine = depends.on<IDisplayInformation>();
         request = fake.an<IContainRequestInformation>();
+        main_departments = new List<Department> {new Department()};
+
+        department_repository.setup(x => x.get_the_main_departments()).Return(main_departments);
       };
 
       Because b = () =>
         sut.process(request);
 
-      It should_get_the_list_of_the_main_departments = () =>
-        department_repository.received(x => x.get_the_main_departments());
+      It should_display_the_main_departments = () =>
+        display_engine.received(x => x.display_the_main_departments(main_departments));
 
       static IFindDepartments department_repository;
       static IContainRequestInformation request;
+      static IDisplayInformation display_engine;
+      static IEnumerable<Department> main_departments;
     }
   }
 }

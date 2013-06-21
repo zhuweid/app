@@ -4,16 +4,16 @@ namespace app.web.application.catalogbrowsing
 {
   public class ViewTheMainDepartmentInTheStore : IImplementAFeature
   {
-      private readonly IFindDepartments departmentFinder;
+    IFindDepartments department_repository;
 
-      public ViewTheMainDepartmentInTheStore(IFindDepartments departmentFinder)
-      {
-          this.departmentFinder = departmentFinder;
-      }
+    public ViewTheMainDepartmentInTheStore(IFindDepartments department_repository)
+    {
+      this.department_repository = department_repository;
+    }
 
     public void process(IContainRequestInformation request)
     {
-        departmentFinder.get_the_main_departments();
+      department_repository.get_the_main_departments();
     }
   }
 }
