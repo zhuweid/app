@@ -2,9 +2,16 @@
 {
   public class FrontController : IProcessRequests
   {
-    public void process(IContainRequestInformation request)
+      private readonly IFindCommands _commandFinder;
+
+      public FrontController(IFindCommands commandFinder)
     {
-      throw new System.NotImplementedException();
+        _commandFinder = commandFinder;
+    }
+    
+     public void process(IContainRequestInformation request)
+    {
+      _commandFinder.get_command_that_can_process(request).process(request);
     }
   }
 }
