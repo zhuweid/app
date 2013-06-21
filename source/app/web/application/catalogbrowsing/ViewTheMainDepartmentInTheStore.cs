@@ -4,9 +4,16 @@ namespace app.web.application.catalogbrowsing
 {
   public class ViewTheMainDepartmentInTheStore : IImplementAFeature
   {
-    public void process(IContainRequestInformation request)
+      private IFindDepartments department_repository;
+
+      public ViewTheMainDepartmentInTheStore(IFindDepartments departmentRepository)
+      {
+          department_repository = departmentRepository;
+      }
+
+      public void process(IContainRequestInformation request)
     {
-      throw new System.NotImplementedException();
+      department_repository.get_the_main_departments();
     }
   }
 }
