@@ -1,10 +1,7 @@
 ﻿namespace app.web.core
 {
-  public interface IProcessOneRequest 
+  public interface IProcessOneRequest : IImplementAFeature
   {
-    void process(IContainRequestInformation request);
     bool can_process(IContainRequestInformation request);
   }
-
-
 }

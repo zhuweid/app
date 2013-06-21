@@ -2,14 +2,24 @@
 {
   public class RequestCommand: IProcessOneRequest
   {
+    IMatchAReqest request_specification;
+    IImplementAFeature feature;
+
+    public RequestCommand(IMatchAReqest request_specification, IImplementAFeature feature)
+    {
+      this.request_specification = request_specification;
+      this.feature = feature;
+    }
+
     public void process(IContainRequestInformation request)
     {
-      throw new System.NotImplementedException();
+      feature.process(request);
     }
 
     public bool can_process(IContainRequestInformation request)
     {
-      throw new System.NotImplementedException();
+      return request_specification(request);
     }
   }
+
 }
