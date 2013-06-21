@@ -5,4 +5,6 @@
     void process(IContainRequestInformation request);
     bool can_process(IContainRequestInformation request);
   }
+
+
 }
