@@ -2,9 +2,17 @@
 {
   public class FrontController : IProcessRequests
   {
-    public void process(IContainRequestInformation request)
-    {
-      throw new System.NotImplementedException();
-    }
+      private readonly IFindCommands commandRegistry;
+
+      public FrontController(IFindCommands commandRegistry)
+      {
+          this.commandRegistry = commandRegistry;
+      }
+
+      public void process(IContainRequestInformation request)
+      {
+          var processOnRequest = commandRegistry.get_command_that_can_process(request);
+          processOnRequest.process(request);
+      }
   }
 }
