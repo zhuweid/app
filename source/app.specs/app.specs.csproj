@@ -118,6 +118,7 @@
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="RawAspNetHandlerSpecs.cs" />
     <Compile Include="RequestCommandSpecs.cs" />
+    <Compile Include="SecuredFeatureSpecs.cs" />
     <Compile Include="utility\ObjectFactory.cs" />
     <Compile Include="ViewTheMainDepartmentInTheStoreSpecs.cs" />
   </ItemGroup>
