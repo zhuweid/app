@@ -94,6 +94,7 @@
     <Compile Include="web\core\IMatchAReqest.cs" />
     <Compile Include="web\core\IProcessOneRequest .cs" />
     <Compile Include="web\core\IProcessRequests.cs" />
+    <Compile Include="web\core\ISecurityProvider.cs" />
     <Compile Include="web\core\RequestCommand.cs" />
     <Compile Include="web\core\stubs\StubDisplayEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />

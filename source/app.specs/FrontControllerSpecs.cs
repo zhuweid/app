@@ -18,7 +18,8 @@ namespace app.specs
       Establish c = () =>
       {
         command_registry = depends.on<IFindCommands>();
-
+        security_provider = depends.on<ISecurityProvider>();
+        security_provider.setup(x => x.Qualify()).Return(true);
         command_that_can_process_request = fake.an<IProcessOneRequest>();
         request = fake.an<IContainRequestInformation>();
 
@@ -34,6 +35,32 @@ namespace app.specs
       static IProcessOneRequest command_that_can_process_request;
       static IContainRequestInformation request;
       static IFindCommands command_registry;
+      static ISecurityProvider security_provider;
+    }
+  
+
+    public class when_security_not_qualified : concern
+    {
+      Establish c = () =>
+      {
+        command_registry = depends.on<IFindCommands>();
+        security_provider = depends.on<ISecurityProvider>();
+        security_provider.setup(x => x.Qualify()).Return(false);
+        request = fake.an<IContainRequestInformation>();
+      };
+
+      Because b = () =>
+        sut.process(request);
+
+      It should_determine_security_qualification = () =>
+        security_provider.received(x => x.Qualify());
+
+      It should_not_process = () =>
+        security_provider.received(x => x.Qualify());
+
+      static IContainRequestInformation request;
+      static IFindCommands command_registry;
+      static ISecurityProvider security_provider;
     }
   }
 }
