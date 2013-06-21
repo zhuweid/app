@@ -52,7 +52,7 @@ namespace app.specs
           all_the_commands = new List<IProcessOneRequest>();
           depends.on<IEnumerable<IProcessOneRequest>>(all_the_commands);
 
-          depends.on<ICreateTheMissingRequestCommand>(x =>
+          depends.on<ICreateTheMissingCommand>(x =>
           {
             x.ShouldEqual(request);
             return the_missing_request_command;
