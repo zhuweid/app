@@ -33,7 +33,7 @@ namespace app.specs
         sut.process(request);
 
       It should_display_the_main_departments = () =>
-        display_engine.received(x => x.display_the_main_departments(main_departments));
+        display_engine.received(x => x.display(main_departments));
 
       static IFindDepartments department_repository;
       static IContainRequestInformation request;

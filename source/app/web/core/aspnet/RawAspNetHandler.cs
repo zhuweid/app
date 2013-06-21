@@ -1,4 +1,5 @@
 ﻿using System.Web;
+using app.web.core.stubs;
 
 namespace app.web.core.aspnet
 {
@@ -7,11 +8,16 @@ namespace app.web.core.aspnet
     IProcessRequests front_controller;
     ICreateRequests request_factory;
 
+    public RawAspNetHandler() : this(new FrontController(), new StubRequestFactory())
+    {
+    }
     public RawAspNetHandler(IProcessRequests front_controller, ICreateRequests request_factory)
+
     {
       this.front_controller = front_controller;
       this.request_factory = request_factory;
     }
+
 
     public bool IsReusable
     {

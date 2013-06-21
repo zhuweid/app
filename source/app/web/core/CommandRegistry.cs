@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using app.web.core.stubs;
 
 namespace app.web.core
 {
@@ -12,6 +14,13 @@ namespace app.web.core
     {
       this.commands = commands;
       this.missing_command_factory = missing_command_factory;
+    }
+
+    public CommandRegistry():this(new StubSetOfCommands(), x =>
+    {
+      throw new NotImplementedException("There is no command to handle this request");
+    })
+    {
     }
 
     public IProcessOneRequest get_command_that_can_process(IContainRequestInformation request)
