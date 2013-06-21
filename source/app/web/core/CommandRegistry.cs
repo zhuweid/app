@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace app.web.core
@@ -14,7 +15,11 @@ namespace app.web.core
 
     public IProcessOneRequest get_command_that_can_process(IContainRequestInformation request)
     {
-        return commands.FirstOrDefault(c => c.can_process(request));
+        var foundCommand = commands.FirstOrDefault(c => c.can_process(request));
+        if (foundCommand == null)
+            throw new InvalidOperationException("command not found.");
+
+        return foundCommand;
     }
   }
 }
