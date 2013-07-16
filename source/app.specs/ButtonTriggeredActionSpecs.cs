@@ -2,7 +2,6 @@
  using Machine.Specifications;
  using app.core;
  using app.specs.utility;
- using app.window;
  using app.windows;
  using developwithpassion.specifications.rhinomocks;
  using developwithpassion.specifications.extensions;

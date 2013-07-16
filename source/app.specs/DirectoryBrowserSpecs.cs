@@ -1,9 +1,6 @@
 ﻿using System.Windows.Forms;
 using Machine.Specifications;
-using app.specs.utility;
-using app.window;
 using app.windows;
-using developwithpassion.specifications.extensions;
 using developwithpassion.specifications.rhinomocks;
 
 namespace app.specs

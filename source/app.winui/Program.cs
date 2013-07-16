@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows.Forms;
-using app.window;
 using app.windows;
 
 namespace app.winui
