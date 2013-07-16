@@ -7,18 +7,21 @@ namespace app.windows
   {
     TreeView tree_view;
     TextBox path_text_box;
+    ICreateFileBrowserNodes node_factory;
 
-    public DirectoryBrowser(TextBox path_text_box, TreeView tree_view)
+    public DirectoryBrowser(TextBox path_text_box, TreeView tree_view, ICreateFileBrowserNodes node_factory)
     {
       this.path_text_box = path_text_box;
       this.tree_view = tree_view;
+
+      this.node_factory = node_factory;
     }
 
     public void initialize()
     {
       tree_view.Nodes.Clear();
-      var node = tree_view.Nodes.Add(path_text_box.Text);
-      node.Nodes.Add("Dummy");
+      var node = node_factory.create_node(path_text_box.Text);
+      tree_view.Nodes.Add(node);
     }
 
     public void run()

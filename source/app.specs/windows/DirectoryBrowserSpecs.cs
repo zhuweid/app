@@ -2,6 +2,7 @@
 using Machine.Specifications;
 using app.windows;
 using developwithpassion.specifications.rhinomocks;
+using developwithpassion.specifications.extensions;
 
 namespace app.specs.windows
 {
@@ -19,25 +20,26 @@ namespace app.specs.windows
       {
         path_text_box = new TextBox();
         tree_view = new TreeView();
-        path_text_box.Text = "blah";
-
+        node = new TreeNode();
+        node_factory = depends.on<ICreateFileBrowserNodes>();
         depends.on(path_text_box);
         depends.on(tree_view);
+
+        path_text_box.Text = "blah";
+
+        node_factory.setup(x => x.create_node("blah")).Return(node);
       };
 
       Because b = () =>
         sut.initialize();
 
-      It should_display_the_specified_directory_in_the_directory_tree = () =>
-        tree_view.Nodes[0].Text.ShouldEqual(path_text_box.Text);
+      It should_display_the_initial_node = () =>
+        tree_view.Nodes[0].ShouldEqual(node);
 
-      It should_display_a_node_that_is_collapsible = () =>
-        tree_view.Nodes[0].Nodes.Count.ShouldBeGreaterThan(0);
-
-      static IDisplayDirectoryHierarchies browser;
       static TreeView tree_view;
       static TextBox path_text_box;
-      static Button button;
+      static ICreateFileBrowserNodes node_factory;
+      static TreeNode node;
     }
 
     public class when_initialized_multiple_times : concern

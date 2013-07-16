@@ -102,12 +102,17 @@
     <Compile Include="web\core\stubs\StubDisplayEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="core\AnonymousAction.cs" />
     <Compile Include="windows\ClickTriggeredAction.cs" />
-    <Compile Include="windows\ICanBeEnabled.cs" />
+    <Compile Include="windows\DummyNode.cs" />
+    <Compile Include="windows\EventArgs.cs" />
+    <Compile Include="windows\ExpandableDirectoryBrowsingNode.cs" />
+    <Compile Include="windows\ICreateFileBrowserNodes.cs" />
     <Compile Include="windows\IDirectoryFind.cs" />
     <Compile Include="windows\DirectoryBrowser.cs" />
     <Compile Include="windows\IDirectoryBrowser.cs" />
     <Compile Include="windows\IDisplayDirectoryHierarchies.cs" />
+    <Compile Include="windows\IGetDirectoryEntries.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

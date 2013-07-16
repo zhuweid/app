@@ -1,7 +1,6 @@
 ﻿using System;
-using app.core;
 
-namespace app.winui
+namespace app.core
 {
   public class AnonymousAction : IRun
   {
