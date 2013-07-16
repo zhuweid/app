@@ -4,6 +4,6 @@ namespace app.windows
 {
   public interface IGetData
   {
-    IEnumerable<string> get_directory_entries(string data);
+    IEnumerable<string> get_directory_entries(string path);
   }
 }

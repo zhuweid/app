@@ -32,7 +32,7 @@ namespace app.winui
 
     public class StubData : IGetData
     {
-      public IEnumerable<string> get_directory_entries(string data)
+      public IEnumerable<string> get_directory_entries(string path)
       {
         return Enumerable.Range(1, 10).Select(x => x.ToString());
       }
@@ -41,9 +41,9 @@ namespace app.winui
     public class StubNodeFactory : ICreateNodes
     {
       static int key = 0;
-      public TreeNode create_node(string text)
+      public TreeNode create_node(string directory_entry)
       {
-        var node = new TreeNode(string.Format("{0} - {1}", text, ++key));
+        var node = new TreeNode(string.Format("{0} - {1}", directory_entry, ++key));
         node.Nodes.Add(DummyNode.NODE_TEXT);
         return node;
       }

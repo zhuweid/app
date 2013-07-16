@@ -4,6 +4,6 @@ namespace app.windows
 {
   public interface ICreateNodes
   {
-    TreeNode create_node(string text); 
+    TreeNode create_node(string directory_entry); 
   }
 }
