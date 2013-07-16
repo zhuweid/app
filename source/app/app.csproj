@@ -102,6 +102,7 @@
     <Compile Include="web\core\stubs\StubDisplayEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="windows\ButtonSwitcher.cs" />
     <Compile Include="windows\ClickTriggeredAction.cs" />
     <Compile Include="windows\IDirectoryFind.cs" />
     <Compile Include="windows\DirectoryBrowser.cs" />

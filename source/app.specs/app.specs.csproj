@@ -114,6 +114,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ButtonSwitcherSpecs.cs" />
     <Compile Include="ButtonTriggeredActionSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
     <Compile Include="DirectoryBrowserSpecs.cs" />

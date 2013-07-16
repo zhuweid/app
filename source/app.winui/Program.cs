@@ -17,6 +17,9 @@ namespace app.winui
       new ClickTriggeredAction(browser, view.button1);
       new ClickTriggeredAction(browser, view.button2);
 
+      var buttonSwitcher = new ButtonSwitcher(view.button3, new[] {view.button1, view.button2});
+      new ClickTriggeredAction(buttonSwitcher, view.button3);
+
       Application.Run(view);
     }
   }
