@@ -58,6 +58,7 @@
     </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -77,6 +78,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="core\IRun.cs" />
     <Compile Include="MessageGenerator.cs" />
     <Compile Include="web\application\catalogbrowsing\Department.cs" />
     <Compile Include="web\application\catalogbrowsing\IFindDepartments.cs" />
@@ -100,9 +102,11 @@
     <Compile Include="web\core\stubs\StubDisplayEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
+    <Compile Include="window\ButtonTriggeredAction.cs" />
     <Compile Include="window\IDirectoryFind.cs" />
-    <Compile Include="window\DirectoryBrowserController.cs" />
-    <Compile Include="window\IBrowserDirectory.cs" />
+    <Compile Include="window\DirectoryBrowser.cs" />
+    <Compile Include="window\IDirectoryBrowser.cs" />
+    <Compile Include="window\IDisplayDirectoryHierarchies.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

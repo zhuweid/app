@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using app.window;
 
 namespace app.winui
 {
@@ -10,7 +11,12 @@ namespace app.winui
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new DirectoryBrowserView());
+
+      var view = new DirectoryBrowserView();
+      var browser = new DirectoryBrowser(view.textBox1, view.treeView1);
+      new ButtonTriggeredAction(browser, view.button1);
+
+      Application.Run(view);
     }
   }
 }
