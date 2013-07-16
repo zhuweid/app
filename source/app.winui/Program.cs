@@ -17,7 +17,7 @@ namespace app.winui
 
       var view = new DirectoryBrowserView();
 
-      var node_factory = new StubNodeFactory();
+      var node_factory = new NodesFactory(UI.DetermineIfANodeIsADirectory, UI.GetDisplayNodeName);
       var browser = new DirectoryBrowser(view.textBox1, view.treeView1,node_factory);
       var action = new StateAwareAction(browser);
 
