@@ -65,7 +65,6 @@ namespace app.specs.windows
 
       static TreeView tree_view;
       static TextBox path_text_box;
-      static Button button;
     }
   }
 }

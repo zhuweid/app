@@ -17,11 +17,12 @@ namespace app.specs.windows
       Because b = () =>
         result = UI.node_requires_reload(node);
 
-      public class and_the_nodes_text_is_the_dummy_node_text
+      public class and_the_nodes_child_node_text_is_the_dummy_node_text
       {
         Establish c = () =>
         {
-          node = new TreeNode(DummyNode.NODE_TEXT);
+          node = new TreeNode("Whatever");
+          node.Nodes.Add(DummyNode.NODE_TEXT);
         };
 
         It should_match = () =>
@@ -33,6 +34,7 @@ namespace app.specs.windows
         Establish c = () =>
         {
           node = new TreeNode("Anything else");
+          node.Nodes.Add("Whatever");
         };
 
         It should_not_match = () =>

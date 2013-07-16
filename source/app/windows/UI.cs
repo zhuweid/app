@@ -2,6 +2,9 @@
 {
   public class UI
   {
-    public static IDetermineIfANodeNeedsToBeReloaded node_requires_reload = (node) => node.Text == DummyNode.NODE_TEXT;
+    public static IDetermineIfANodeNeedsToBeReloaded node_requires_reload = (node) =>
+    {
+      return node.Nodes.Count > 0 && node.FirstNode.Text == DummyNode.NODE_TEXT;
+    };
   }
 }

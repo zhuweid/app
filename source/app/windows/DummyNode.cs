@@ -2,6 +2,6 @@
 {
   public class DummyNode
   {
-    public static string NODE_TEXT = "DUMMY_NODE_THAT_NEEDS_TO_BE_REMOVED";
+    public const string NODE_TEXT = "DUMMY_NODE_THAT_NEEDS_TO_BE_REMOVED";
   }
 }
