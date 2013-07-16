@@ -3,7 +3,7 @@ using Machine.Specifications;
 using app.windows;
 using developwithpassion.specifications.rhinomocks;
 
-namespace app.specs
+namespace app.specs.windows
 {
   [Subject(typeof(DirectoryBrowser))]
   public class DirectoryBrowserSpecs

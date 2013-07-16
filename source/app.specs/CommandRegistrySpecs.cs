@@ -2,8 +2,8 @@
 using System.Linq;
 using Machine.Specifications;
 using app.web.core;
-using developwithpassion.specifications.rhinomocks;
 using developwithpassion.specifications.extensions;
+using developwithpassion.specifications.rhinomocks;
 
 namespace app.specs
 {
@@ -26,7 +26,7 @@ namespace app.specs
 
           request = fake.an<IContainRequestInformation>();
           the_command_that_can_process_the_request = fake.an<IProcessOneRequest>();
-          Enumerable.Range(1,1000).each(x => all_the_commands.Add(fake.an<IProcessOneRequest>()));
+          Enumerable.Range(1, 1000).each(x => all_the_commands.Add(fake.an<IProcessOneRequest>()));
           all_the_commands.Add(the_command_that_can_process_the_request);
 
           the_command_that_can_process_the_request.setup(x => x.can_process(request)).Return(true);

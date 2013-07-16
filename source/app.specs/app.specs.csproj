@@ -114,10 +114,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ButtonSwitcherSpecs.cs" />
-    <Compile Include="ButtonTriggeredActionSpecs.cs" />
+    <Compile Include="windows\ButtonTriggeredActionSpecs.cs" />
     <Compile Include="CommandRegistrySpecs.cs" />
-    <Compile Include="DirectoryBrowserSpecs.cs" />
+    <Compile Include="windows\DirectoryBrowserSpecs.cs" />
     <Compile Include="FrontControllerSpecs.cs" />
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="RawAspNetHandlerSpecs.cs" />

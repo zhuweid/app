@@ -1,12 +1,12 @@
-﻿ using System.Windows.Forms;
- using Machine.Specifications;
- using app.core;
- using app.specs.utility;
- using app.windows;
- using developwithpassion.specifications.rhinomocks;
- using developwithpassion.specifications.extensions;
+﻿using System.Windows.Forms;
+using Machine.Specifications;
+using app.core;
+using app.specs.utility;
+using app.windows;
+using developwithpassion.specifications.rhinomocks;
+using developwithpassion.specifications.extensions;
 
-namespace app.specs
+namespace app.specs.windows
 {  
   [Subject(typeof(ClickTriggeredAction))]  
   public class ButtonTriggeredActionSpecs

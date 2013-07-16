@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using app.core;
 using app.windows;
 
 namespace app.winui
@@ -14,13 +15,19 @@ namespace app.winui
 
       var view = new DirectoryBrowserView();
       var browser = new DirectoryBrowser(view.textBox1, view.treeView1);
-      new ClickTriggeredAction(browser, view.button1);
-      new ClickTriggeredAction(browser, view.button2);
+      var action = new StateAwareAction(browser);
 
-      var buttonSwitcher = new ButtonSwitcher(view.button3, new[] {view.button1, view.button2});
-      new ClickTriggeredAction(buttonSwitcher, view.button3);
+      new ClickTriggeredAction(action, view.button1);
+      new ClickTriggeredAction(action, view.button2);
+
 
       Application.Run(view);
     }
+
+    static IRun create_runnable_action(Action action)
+    {
+      return new AnonymousAction(action); 
+    }
+
   }
 }
