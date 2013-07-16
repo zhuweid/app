@@ -7,9 +7,9 @@ namespace app.windows
   {
     TreeView tree_view;
     TextBox path_text_box;
-    ICreateFileBrowserNodes node_factory;
+    ICreateNodes node_factory;
 
-    public DirectoryBrowser(TextBox path_text_box, TreeView tree_view, ICreateFileBrowserNodes node_factory)
+    public DirectoryBrowser(TextBox path_text_box, TreeView tree_view, ICreateNodes node_factory)
     {
       this.path_text_box = path_text_box;
       this.tree_view = tree_view;

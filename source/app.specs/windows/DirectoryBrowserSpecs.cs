@@ -21,7 +21,7 @@ namespace app.specs.windows
         path_text_box = new TextBox();
         tree_view = new TreeView();
         node = new TreeNode();
-        node_factory = depends.on<ICreateFileBrowserNodes>();
+        node_factory = depends.on<ICreateNodes>();
         depends.on(path_text_box);
         depends.on(tree_view);
 
@@ -38,7 +38,7 @@ namespace app.specs.windows
 
       static TreeView tree_view;
       static TextBox path_text_box;
-      static ICreateFileBrowserNodes node_factory;
+      static ICreateNodes node_factory;
       static TreeNode node;
     }
 
@@ -63,7 +63,6 @@ namespace app.specs.windows
       It should_clear_out_the_treeview_prior_to_displaying_the_new_node = () =>
         tree_view.Nodes.Count.ShouldEqual(1);
 
-      static IDisplayDirectoryHierarchies browser;
       static TreeView tree_view;
       static TextBox path_text_box;
       static Button button;

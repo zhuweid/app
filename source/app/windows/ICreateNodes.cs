@@ -2,7 +2,7 @@
 
 namespace app.windows
 {
-  public interface ICreateFileBrowserNodes
+  public interface ICreateNodes
   {
     TreeNode create_node(string text); 
   }

@@ -107,12 +107,14 @@
     <Compile Include="windows\DummyNode.cs" />
     <Compile Include="windows\EventArgs.cs" />
     <Compile Include="windows\ExpandableDirectoryBrowsingNode.cs" />
-    <Compile Include="windows\ICreateFileBrowserNodes.cs" />
+    <Compile Include="windows\ICreateNodes.cs" />
+    <Compile Include="windows\IDetermineIfANodeNeedsToBeReloaded.cs" />
     <Compile Include="windows\IDirectoryFind.cs" />
     <Compile Include="windows\DirectoryBrowser.cs" />
     <Compile Include="windows\IDirectoryBrowser.cs" />
     <Compile Include="windows\IDisplayDirectoryHierarchies.cs" />
-    <Compile Include="windows\IGetDirectoryEntries.cs" />
+    <Compile Include="windows\IGetData.cs" />
+    <Compile Include="windows\UI.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
