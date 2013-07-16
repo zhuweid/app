@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace app.window
+namespace app.windows
 {
   public interface IDisplayDirectoryHierarchies
   {

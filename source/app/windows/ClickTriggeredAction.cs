@@ -1,24 +1,24 @@
 ﻿using System.Windows.Forms;
 using app.core;
 
-namespace app.window
+namespace app.windows
 {
-  public class ButtonTriggeredAction
+  public class ClickTriggeredAction
   {
     IRun action;
-    Button button;
+    Control control;
 
-    public ButtonTriggeredAction(IRun action, Button button)
+    public ClickTriggeredAction(IRun action, Control control)
     {
       this.action = action;
-      this.button = button;
+      this.control = control;
 
       hookup_event_handlers();
     }
 
     void hookup_event_handlers()
     {
-      button.Click += delegate
+      control.Click += delegate
       {
         action.run();
       };

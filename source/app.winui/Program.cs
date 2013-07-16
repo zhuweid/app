@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using app.window;
+using app.windows;
 
 namespace app.winui
 {
@@ -14,7 +15,8 @@ namespace app.winui
 
       var view = new DirectoryBrowserView();
       var browser = new DirectoryBrowser(view.textBox1, view.treeView1);
-      new ButtonTriggeredAction(browser, view.button1);
+      new ClickTriggeredAction(browser, view.button1);
+      new ClickTriggeredAction(browser, view.button2);
 
       Application.Run(view);
     }

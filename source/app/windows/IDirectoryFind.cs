@@ -1,4 +1,4 @@
-﻿namespace app.window
+﻿namespace app.windows
 {
   public interface IDirectoryFind
   {

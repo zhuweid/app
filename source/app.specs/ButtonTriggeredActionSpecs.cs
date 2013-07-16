@@ -3,15 +3,16 @@
  using app.core;
  using app.specs.utility;
  using app.window;
+ using app.windows;
  using developwithpassion.specifications.rhinomocks;
  using developwithpassion.specifications.extensions;
 
 namespace app.specs
 {  
-  [Subject(typeof(ButtonTriggeredAction))]  
+  [Subject(typeof(ClickTriggeredAction))]  
   public class ButtonTriggeredActionSpecs
   {
-    public abstract class concern : Observes<ButtonTriggeredAction>
+    public abstract class concern : Observes<ClickTriggeredAction>
     {
         
     }

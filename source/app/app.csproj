@@ -102,11 +102,11 @@
     <Compile Include="web\core\stubs\StubDisplayEngine.cs" />
     <Compile Include="web\core\stubs\StubRequestFactory.cs" />
     <Compile Include="web\core\stubs\StubSetOfCommands.cs" />
-    <Compile Include="window\ButtonTriggeredAction.cs" />
-    <Compile Include="window\IDirectoryFind.cs" />
-    <Compile Include="window\DirectoryBrowser.cs" />
-    <Compile Include="window\IDirectoryBrowser.cs" />
-    <Compile Include="window\IDisplayDirectoryHierarchies.cs" />
+    <Compile Include="windows\ClickTriggeredAction.cs" />
+    <Compile Include="windows\IDirectoryFind.cs" />
+    <Compile Include="windows\DirectoryBrowser.cs" />
+    <Compile Include="windows\IDirectoryBrowser.cs" />
+    <Compile Include="windows\IDisplayDirectoryHierarchies.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

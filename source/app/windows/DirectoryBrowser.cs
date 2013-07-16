@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using app.core;
 
-namespace app.window
+namespace app.windows
 {
   public class DirectoryBrowser : IDirectoryBrowser, IRun
   {
@@ -16,6 +16,7 @@ namespace app.window
 
     public void initialize()
     {
+      tree_view.Nodes.Clear();
       var node = tree_view.Nodes.Add(path_text_box.Text);
       node.Nodes.Add("Dummy");
     }
